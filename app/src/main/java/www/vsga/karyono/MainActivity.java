@@ -3,6 +3,8 @@ package www.vsga.karyono;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         buttons[3][1]=findViewById(R.id.n);
         buttons[3][2]=findViewById(R.id.o);
         buttons[3][3]=findViewById(R.id.blank);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater =
+                getMenuInflater();
+        inflater.inflate(R.menu.optionmenu,menu);
+        return true;
     }
 
     @Override
